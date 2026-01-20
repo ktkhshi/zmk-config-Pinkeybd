@@ -3,7 +3,7 @@
 #include "pinkeybd-layer.dtsi"
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
 &lt {
     tapping-term-ms = <140>;
@@ -15,10 +15,12 @@
 
 / {
     behaviors {
-        rot_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
         };
 
         my_lt: layer_tap {
@@ -47,7 +49,7 @@
                 &kp X        &kp C        &kp V        &kp W        &kp F                 &kp TAB                            &kp J        &kp H        &kp M        &kp B        &kp Z
                 &kp LSHIFT                             &kp LEFT_WIN &my_lt LOWER LANGUAGE_1 &kp SPACE             &kp Q      &kp RSHIFT   &kp ENTER    &my_lt NUM_L LANGUAGE_2   &kp RCTRL
             >;
-            sensor-bindings = <&rot_kp PG_DN PG_UP>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
     
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -121,6 +123,7 @@
                 &none       &none        &none        &none         &none        &none                         &kp C_PREVIOUS   &kp C_NEXT   &none        &none        &none
                 &kp LSHIFT                            &none         &none        &none             &none       &mkp LCLK        &none        &none                     &kp RCTRL
             >;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |            |            |                  |            |    none    |    none    |    none    |   BT_CLR   | BT_CLR_ALL |
