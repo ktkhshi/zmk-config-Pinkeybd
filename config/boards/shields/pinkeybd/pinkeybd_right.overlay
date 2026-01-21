@@ -52,7 +52,7 @@
 };
 
 &zip_temp_layer {
-    require-prior-idle-ms = <200>;
+    require-prior-idle-ms = <100>;
 };
 
 &zip_temp_layer {
@@ -69,7 +69,7 @@
 
 / {
     trackball_listener: trackball_listener {
-        status="okay";
+        status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
 

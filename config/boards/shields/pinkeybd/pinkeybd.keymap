@@ -10,7 +10,12 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 5 1500>;
+    input-processors = <&zip_temp_layer 5 300>;
+};
+
+&kscan0 {
+    debounce-press-ms = <1>;
+    debounce-release-ms = <5>;
 };
 
 / {
