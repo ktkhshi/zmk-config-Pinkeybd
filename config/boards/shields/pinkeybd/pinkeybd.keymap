@@ -103,30 +103,30 @@
         };
             // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |     F1      |     F2     |     F3     |     F4     |    F5      |    C_VOL_UP  |                |            |    F6      |    F7      |    F8      |    F9       |     F10      |
-            // |     F11     |     F12    |     F13    |     F14    |    F15     |    none      |                |   none     |    F16     |    F17     |    F18     |    F19      |     F20      |
-            // |     none    |    none    |    none    |    none    |   none     |    C_VOL_DN  |                |   none     |    none    |    none    |    none    |    none     |     none     |
-            // |     L_SHIFT |    none    |    none    |    none    |   none     |    none      |                |   none     |    none    |    none    |    none    |    none     |  Bt_layer    |
+            // |     F11     |     F12    |     F13    |     F14    |    F15     |    none      |                |            |    F16     |    F17     |    F18     |    F19      |     F20      |
+            // |     none    |    none    |    none    |    none    |   none     |    C_VOL_DN  |                | RIGHT_WIN  |    none    |    none    |    none    |    none     |     none     |
+            // |     L_SHIFT |            |            |    LALT    |   none     |    none      |                |   RCTRL    |    none    |    none    |            |             |  Bt_layer    |
             // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Func_layer {
             bindings = <
                 &kp F1       &kp F2       &kp F3       &kp F4        &kp F5      &kp C_VOL_UP                   &kp F6       &kp F7       &kp F8     &kp F9      &kp F10
                 &kp F11      &kp F12      &kp F13      &kp F14       &kp F15     &none                          &kp F16      &kp F17      &kp F18    &kp F19     &kp F20
                 &none        &none        &none        &none         &none       &kp C_VOL_DN                   &none        &none        &none      &none       &none
-                &kp LSHIFT                             &none         &none       &none               &none      &none        &none        &none                  &mo BT_L
+                &kp LSHIFT                             &kp LALT      &none       &none          &kp RIGHT_WIN   &kp RCTRL    &none        &none                  &mo BT_L
             >;
         };
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             // |    none    |    none    |    none    |    none    |   none     |    ESC     |                  |            |    MCLK    |    none    |    none    |   none     |    none    |
             // |    none    |    none    |    none    |    none    |   none     |    none    |                  |            |    none    |    RCLK    |    MB4     |   MB5      |    none    |
             // |    none    |    none    |    none    |    none    |   none     |    none    |                  | C_PREVIOUS |    C_NEXT  |    none    |    none    |   none     |    none    |
-            // |    L_SHIFT |    none    |    none    |    none    |   none     |    none    |                  |    LCLK    |    none    |    none    |    none    |   none     |    RCTRL   |
+            // |    L_SHIFT |            |            |    none    |   none     |    none    |                  |    LCLK    |    none    |    none    |            |            |    RCTRL   |
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Mouse_layer {
             bindings = <
                 &none       &none        &none        &none         &none        &kp ESC                       &mkp MCLK        &none        &none        &none        &none
                 &none       &none        &none        &none         &none        &none                         &none            &mkp RCLK    &mkp MB4     &mkp MB5     &none
                 &none       &none        &none        &none         &none        &none                         &kp C_PREVIOUS   &kp C_NEXT   &none        &none        &none
-                &kp LSHIFT                            &none         &none        &none             &none       &mkp LCLK        &none        &none                     &kp RCTRL
+                &kp LSHIFT                            &kp LCTRL     &none        &none             &none       &mkp LCLK        &none        &none                     &kp RCTRL
             >;
             sensor-bindings = <&encoder_msc_down_up>;
         };
@@ -134,7 +134,7 @@
             // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |            |            |                  |            |    none    |    none    |    none    |   BT_CLR   | BT_CLR_ALL |
             // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |   BT_PRV   |    none    |   BT_NXT   |    none    |
             // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |    none    |    none    |   none     |    none    |
-            // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |    none    |    none    |   none     |    none    |
+            // |    none    |            |            |    none    |   none     |    none    |                  |    none    |    none    |    none    |            |            |    none    |
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Bt_layer {
             bindings = <
