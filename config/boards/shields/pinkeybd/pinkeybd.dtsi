@@ -58,5 +58,7 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
