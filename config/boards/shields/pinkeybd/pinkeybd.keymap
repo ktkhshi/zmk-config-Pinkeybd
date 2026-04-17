@@ -71,14 +71,14 @@
             >;  
         };
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |    /           |       ,        |       END     |      C_VOL_UP    |       ’      |    ESC        |                  |            |      {      |      }         |    PG_UP      |     {       |      }    |
+            // |    /           |       ,        |       UNDO    |      C_VOL_UP    |       ’      |    ESC        |                  |            |      {      |      }         |    PG_UP      |     {       |      }    |
             // |    HOME        |       C_SAVE   |       END     |      C_VOL_DN    |   C_MUTE     |    SCROLLLOCK |                  |            |  Backspace  |    HOME        |    PG_DN      |    END      |   DEL     |
             // |    UNDO        |       CUT      |       COPY    |      WIN_PASTE   |       Q      |    TAB        |                  |   PSCRN    |    ' / "    |    = / +       |    \ / |      |    ` / ~    |   INS     |
             // |    L_SHIFT     |                |               |      LCTRL       |       none   |    SPACE      |                  |   ENTER    |    none     |   R_SHIFT      |               |             |   RCTRL   |
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Lower2_layer {
             bindings = <
-                &none        &kp COMMA    &kp END      &kp C_VOL_UP         &kp SINGLE_QUOTE    &kp ESC                             &kp LEFT_BRACE  &kp RIGHT_BRACE &kp PG_UP       &kp LBRC       &kp RBRC
+                &none        &kp COMMA    &kp LC(Y)    &kp C_VOL_UP         &kp SINGLE_QUOTE    &kp ESC                             &kp LEFT_BRACE  &kp RIGHT_BRACE &kp PG_UP       &kp LBRC       &kp RBRC
                 &kp LC(A)    &kp LC(S)    &kp END      &kp C_VOL_DN         &kp C_MUTE          &kp SCROLLLOCK                      &kp BSPC        &kp HOME        &kp PG_DN       &kp END        &kp DEL
                 &kp LC(Z)    &kp LC(X)    &kp LC(C)    &kp LG(V)            &kp LALT            &kp TAB                             &kp APOS        &kp EQUAL       &kp BSLH        &kp GRAVE      &kp INS
                 &kp LSHIFT                             &kp LCTRL            &none               &kp SPACE               &kp PSCRN   &kp RSHIFT      &kp ENTER       &none                          &kp RCTRL
