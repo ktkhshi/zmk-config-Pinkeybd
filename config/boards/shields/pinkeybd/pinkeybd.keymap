@@ -3,6 +3,7 @@
 #include "pinkeybd-layer.dtsi"
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
+#include <behaviors/rgbled_widget.dtsi>
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
 &lt {
@@ -45,7 +46,7 @@
             // |        /       |       ,       |       .       |      -        |      ;       |    ESC         |                   |           |       L      |       R       |       D       |       Y       |      P      |
             // |        A       |       O       |       E       |      I        |      U       |    SCROLLLOCK  |                   |           |       G      |       N       |       T       |       S       |      K      |
             // |        X       |       C       |       V       |      W        |      F       |    TAB         |                   |  Q / ALT  |       J      |       H       |       M       |       B       |      Z      |
-            // |    L_SHIFT     |               |               |    Space      |   LOWER / Jp |    LEFT_WIN    |                   |  R_SHIFT  |      ENTER   |   NUM_L / Ja  |               |               |   RCTRL     |
+            // |    L_SHIFT     |               |               |    LEFT_WIN   |   LOWER / Jp |    Space       |                   |  R_SHIFT  |      ENTER   |   NUM_L / Ja  |               |               |   RCTRL     |
             // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         default_layer {
             bindings = <
@@ -138,7 +139,7 @@
                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4 &bt BT_SEL 5                  &none        &none        &none        &bt BT_CLR   &bt BT_CLR_ALL
                 &none        &none        &none        &none         &none        &none                         &none        &bt BT_PRV   &none        &bt BT_NXT   &none
                 &none        &none        &none        &none         &none        &none                         &none        &none        &none        &none        &none
-                &none                                  &none         &none        &none             &none       &none        &none        &none                     &none
+                &none                                  &none         &none        &none             &ind_bat    &none        &none        &none                     &none
             >;
         };
     };
