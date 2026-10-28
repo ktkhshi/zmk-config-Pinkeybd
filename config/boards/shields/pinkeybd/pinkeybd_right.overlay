@@ -54,6 +54,8 @@
 
 &zip_temp_layer {
     require-prior-idle-ms = <100>;
+    // キー入力中、振動や意図せずトラボに触れてしまうことが原因でAMLが発動し、マウスクリックが誤爆することの対策
+    // キー入力から一定時間はAMLを発動しない
 };
 
 &zip_temp_layer {

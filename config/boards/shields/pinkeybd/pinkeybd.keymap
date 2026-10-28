@@ -10,7 +10,7 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 5 300>;
+    input-processors = <&zip_temp_layer 5 200>;
 };
 
 &kscan0 {
@@ -113,17 +113,17 @@
             >;
         };
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-            // |    none    |    none    |    none    |    none    |   none     |    ESC     |                  |            |    MCLK    |    none    |    none    |   none     |    none    |
+            // |    none    |    none    |    none    |    none    |   none     |    ESC     |                  |            |    RCLK    |    none    |    none    |   none     |    none    |
             // |    none    |    none    |    none    |    none    |   none     |    none    |                  |            |    none    |    RCLK    |    MB4     |   MB5      |    none    |
-            // |    none    |    none    |    none    |    none    |   none     |    none    |                  | C_PREVIOUS |    C_NEXT  |    none    |    none    |   none     |    none    |
+            // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    MCLK    | C_PREVIOUS |   C_NEXT   |    none    |   none     |    none    |
             // |    L_SHIFT |            |            |    none    |   none     |    none    |                  |    LCLK    |    none    |    none    |            |            |    RCTRL   |
             // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         Mouse_layer {
             bindings = <
-                &none       &none        &none        &none         &none        &kp ESC                       &mkp MCLK        &none        &none        &none        &none
-                &none       &none        &none        &none         &none        &none                         &none            &mkp RCLK    &mkp MB4     &mkp MB5     &none
-                &none       &none        &none        &none         &none        &none                         &kp C_PREVIOUS   &kp C_NEXT   &none        &none        &none
-                &kp LSHIFT                            &kp LCTRL     &none        &none             &none       &mkp LCLK        &none        &none                     &kp RCTRL
+                &none       &none        &none        &none         &none        &kp ESC                       &mkp RCLK        &none        &none        &mkp MB4     &mkp MB5
+                &none       &none        &none        &none         &none        &none                         &none            &none        &none        &none        &none
+                &none       &none        &none        &none         &none        &none                         &mkp C_PREVIOUS  &kp C_NEXT   &none        &none        &none
+                &kp LSHIFT                            &kp LCTRL     &none        &none             &mkp MCLK   &mkp LCLK        &none        &none                     &kp RCTRL
             >;
             sensor-bindings = <&encoder_msc_down_up>;
         };
